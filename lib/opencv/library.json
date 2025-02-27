@@ -1,0 +1,37 @@
+{
+  "name": "opencv",
+  "version": "4.x.x",
+  "frameworks": ["arduino", "espidf"],
+  "platforms": ["espressif32", "native"],
+  "export": {
+    "include": [
+      "include/opencv4/opencv2"
+    ]
+  },
+  "build": {
+    "flags": [
+      "-Iinclude/opencv4",
+      "-Iinclude/opencv4/opencv2",
+      "-L.",
+      "-lopencv_imgcodecs",
+      "-lliblibpng",
+      "-lzlib",
+      "-lopencv_imgproc",
+      "-lopencv_core",
+      "-lade"
+    ]
+  },
+  "build_deb": {
+    "flags": [
+      "-Iinclude/opencv4",
+      "-Iinclude/opencv4/opencv2",
+      "-L.",
+      "-lopencv_imgcodecsd",
+      "-lliblibpngd",
+      "-lzlibd",
+      "-lopencv_imgprocd",
+      "-lopencv_cored",
+      "-laded"
+    ]
+  }
+}
